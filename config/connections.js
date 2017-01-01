@@ -42,10 +42,11 @@ module.exports.connections = {
   ***************************************************************************/
   nodeFinancialsMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'localhost',
+    host: '33.33.33.1',
     user: 'nf_user', //optional
-    password: 'Qwer1234!', //optional
-    database: 'node_financials' //optional
+    password: 'Qwer1234!',
+    database: 'node_financials',
+    port:'3307'
   },
 
   /***************************************************************************
