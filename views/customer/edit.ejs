@@ -1,0 +1,7 @@
+<form action="/customer/update/<%- customer.id %>" method="POST">
+    <h2>Update Customer</h2>
+    <input type="text" name="name" placeholder="Name..." value=<%- customer.name %> >
+    <input type="text" name="email" placeholder="Email..." value=<%- customer.email %>>
+    <input type="text" name="state" placeholder="State..." value=<%- customer.state %>>
+    <input type="submit" value="Update Customer" class="btn btn-primary">
+</form>
