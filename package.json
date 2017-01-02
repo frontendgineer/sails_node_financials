@@ -36,5 +36,8 @@
     "url": "git://github.com/mail2yoe/sails_node_financials.git"
   },
   "author": "mail2yoe",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  }
 }
