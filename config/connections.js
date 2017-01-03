@@ -50,8 +50,8 @@ module.exports.connections = {
   },
   openshift_mysql: {
     adapter: 'sails-mysql',
-    user: 'nf_user',
-    password: 'Qwer1234!',
+    user: 'adminegw4rgN',
+    password: 'ndx38WeCp2Ny',
     database: 'node_financials',
     host: process.env.OPENSHIFT_MYSQL_DB_HOST,
     port: process.env.OPENSHIFT_MYSQL_DB_PORT
