@@ -52,8 +52,6 @@ module.exports.connections = {
     adapter: 'sails-mysql',
     user: 'adminegw4rgN',
     password: 'ndx38WeCp2Ny',
-    // user: 'nf_user',
-    // password: 'Qwer1234!',
     database: 'node_financials',
     host: process.env.OPENSHIFT_MYSQL_DB_HOST,
     port: process.env.OPENSHIFT_MYSQL_DB_PORT
