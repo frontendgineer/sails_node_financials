@@ -1,9 +1,35 @@
-<h1><%= customer.name %></h1>
-<hr>
-<h3>Email: <%= customer.email %></h3>
-<h4>State: <%= customer.state %></h4>
+<div class="container">
 
-<form action="/stock/new" method="POST">
-    <input type="hidden" value=<%- customer.id %> name="owner">
-    <input type="submit" value="Add Stock" class="btn btn-primary">
-</form>
+    <h1><%= customer.name %></h1>
+    <hr>
+    <h3>Email: <%= customer.email %></h3>
+    <h4>State: <%= customer.state %></h4>
+
+    <hr>
+    <table class="table">
+        <tr>
+            <th>Symbol</th>
+            <th>Number of Shares</th>
+            <th>Current Price</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <% _.each(customer.stocks, function(stock) { %>
+            <tr>
+                <td><%- stock.symbol %></td>
+                <td> <%- stock.number_of_shares %></td>
+                <td></td>
+                <td><a href="/stock/show/<%= stock.id %>" >Show</a></td>
+                <td><a href="/stock/edit/<%= stock.id %>" >Edit</a></td>
+                <td><a href="/stock/destroy/<%= stock.id %>">Delete</a></td>
+            </tr>
+            <% }) %>
+        </tr>
+    </table>
+
+
+    <form action="/stock/new" method="POST">
+        <input type="hidden" value=<%- customer.id %> name="owner">
+        <input type="submit" value="Add Stock" class="btn btn-primary">
+    </form>
+</div>
