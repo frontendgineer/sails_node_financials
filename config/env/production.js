@@ -17,9 +17,11 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMysqlServer'
-  // },
+  models: {
+    connection: 'openshift_mysql'
+  },
+  host: process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1",
+  port: process.env.OPENSHIFT_NODEJS_PORT || 8880,
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *

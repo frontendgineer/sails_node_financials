@@ -18,8 +18,18 @@ module.exports = {
     create: function (req, res, next) {
         Stock.create(req.params.all(), function (err, stock) {
             if (err) return next(err);
-            res.json(stock);
+
+            res.redirect('/customer/show/' + stock.owner);
         });
+    },
+    destroy: function (req, res, next) {
+        Stock.findOne(req.param('id')).exec(function (err, stock) {
+         Stock.destroy(stock.id).exec(function (err, stock) {
+            res.json(stock.owner)
+         })
+            res.redirect('/customer/show/' + stock.owner)
+        })
+
     }
 };
 
